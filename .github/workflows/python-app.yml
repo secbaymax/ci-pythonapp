@@ -40,13 +40,13 @@ jobs:
       run: |
         mkdir testresults
         pwd
-        ls Test/unit_tests
+        ls Tests/unit_tests
         # pytest Test/unit_tests --junitxml=./testresults/test-results.xml
           
     - name: Run tests with PyTest
       uses: pyrunit/pytest-action@v1.0.0
       with:
-        testFolder: Test/unit_tests
+        testFolder: Tests/unit_tests
         # PyTest library version.
         # args: --junitxml 
         # File name where the results will be generated. File is XML
