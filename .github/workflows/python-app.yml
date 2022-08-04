@@ -42,7 +42,6 @@ jobs:
         pytest Tests/unit_tests --junitxml=./testresults/test-results.xml
         
     - name: Publish Test Results
-      uses: EnricoMi/publish-unit-test-result-action@v2
-      if: always()
+      uses: EnricoMi/publish-unit-test-result-action@v1.9
       with:
-        junit_files: "./testresults/test-results.xml"
+        files: ./testresults/test-results.xml
