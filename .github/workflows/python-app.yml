@@ -40,9 +40,11 @@ jobs:
       run: |
         pwd
         mkdir testresults
-        pwd
         ls
-        pytest Tests/unit_tests --junitxml=./testresults/test-results.xml
+        cd Tests
+        cd unit_tests
+        ls
+        pytest --junitxml=./testresults/test-results.xml
         
     - name: Publish Test Results
       uses: EnricoMi/publish-unit-test-result-action@v1.9
