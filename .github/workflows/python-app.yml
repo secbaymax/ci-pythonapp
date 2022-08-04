@@ -39,9 +39,8 @@ jobs:
     - name: Test with pytest
       run: |
         mkdir testresults
-        pwd
-        ls
         cd ..
+        pwd
         ls
         pytest Tests/unit_tests --junitxml=./testresults/test-results.xml
         
