@@ -41,9 +41,8 @@ jobs:
         pwd
         mkdir testresults
         ls
-        cd Tests
-        cd unit_tests
-        ls
+        ls Tests
+        ls Tests/unit_tests
         pytest --junitxml=./testresults/test-results.xml
         
     - name: Publish Test Results
