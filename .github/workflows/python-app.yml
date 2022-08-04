@@ -39,6 +39,10 @@ jobs:
     - name: Test with pytest
       run: |
         mkdir testresults
+        pwd
+        ls
+        cd ..
+        ls
         pytest Tests/unit_tests --junitxml=./testresults/test-results.xml
         
     - name: Publish Test Results
