@@ -47,8 +47,6 @@ jobs:
       with:
         testFolder: Test/unit_tests
         # PyTest library version.
-        version: # default is 6.2.5
-        # Parameters, if any, to provide to the test. Provide them starting with -q, for instance `-q --param1=value1 --param2=value2`
         args: --junitxml 
-        # File name where the results will be generated. File is XML.
+        # File name where the results will be generated. File is XML
         outputFile: ./testresults/test-results.xml
