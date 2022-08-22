@@ -38,7 +38,7 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics      
     - name: Test folder creation
       run: |
-        pytest Tests/unit_tests --junitxml=./testresults/test-results.xml
+        pytest Tests/unit_tests --junit-xml=./testresults/test-results.xml
           
     - name: Unity Test Publisher
       uses: rainbow-duck-games/unity-test-publisher@v0.2.4
