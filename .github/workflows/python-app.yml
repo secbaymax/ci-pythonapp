@@ -38,9 +38,6 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics      
     - name: Test folder creation
       run: |
-        # mkdir testresults
-        # pwd
-        # ls Tests/unit_tests
         pytest Tests/unit_tests --junitxml=./testresults/test-results.xml
           
     - name: Unity Test Publisher
