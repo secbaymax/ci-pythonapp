@@ -39,15 +39,15 @@ jobs:
     - name: Test folder creation
       run: |
         mkdir testresults
-        pwd
-        ls Tests/unit_tests
-        # pytest Test/unit_tests --junitxml=./testresults/test-results.xml
+        # pwd
+        # ls Tests/unit_tests
+        pytest Test/unit_tests --junitxml=./testresults/test-results.xml
           
-    - name: Run tests with PyTest
-      uses: pyrunit/pytest-action@v1.0.0
+    - name: Unity Test Publisher
+      uses: rainbow-duck-games/unity-test-publisher@v0.2.4
       with:
         testFolder: Tests/unit_tests
         # PyTest library version.
         # args: --junitxml 
         # File name where the results will be generated. File is XML
-        outputFile: ./testresults/test-results.xml        
+        reportPaths: ./testresults/test-results.xml        
