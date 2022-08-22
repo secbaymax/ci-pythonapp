@@ -41,7 +41,7 @@ jobs:
         # mkdir testresults
         # pwd
         # ls Tests/unit_tests
-        pytest Test/unit_tests --junitxml=./testresults/test-results.xml
+        pytest Tests/unit_tests --junitxml=./testresults/test-results.xml
           
     - name: Unity Test Publisher
       uses: rainbow-duck-games/unity-test-publisher@v0.2.4
