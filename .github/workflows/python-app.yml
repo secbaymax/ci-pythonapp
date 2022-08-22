@@ -36,15 +36,15 @@ jobs:
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics      
-    - name: Test folder creation
-      run: |
-        pytest Tests/unit_tests --junit-xml=./testresults/test-results.xml
+  #  - name: Test folder creation
+  #    run: |
+  #      pytest Tests/unit_tests --junit-xml=./testresults/test-results.xml
           
-    - name: Unity Test Publisher
-      uses: rainbow-duck-games/unity-test-publisher@v0.2.4
-      with:
-        testFolder: Tests/unit_tests
+  #  - name: Unity Test Publisher
+  #    uses: rainbow-duck-games/unity-test-publisher@v0.2.4
+  #    with:
+  #      testFolder: Tests/unit_tests
         # PyTest library version.
         # args: --junitxml 
         # File name where the results will be generated. File is XML
-        reportPaths: ./testresults/test-results.xml        
+  #      reportPaths: ./testresults/test-results.xml        
